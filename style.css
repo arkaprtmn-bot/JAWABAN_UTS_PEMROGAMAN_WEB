@@ -1,0 +1,266 @@
+/* --- PENGATURAN DASAR & RESET --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f7f6;
+    scroll-behavior: smooth;
+}
+
+/* --- HEADER & NAVIGASI --- */
+header {
+    background-color: #1a252f;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+header .logo h1 {
+    font-size: 1.5rem;
+    color: #f39c12;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #f39c12;
+}
+
+/* --- HERO PANEL --- */
+.hero-panel {
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('images/imagelain.jpg') no-repeat center center/cover;
+    color: #fff;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.hero-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #ddd;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #f39c12;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #e67e22;
+}
+
+/* --- MAIN & SECTION STYLING --- */
+main {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+section {
+    background: #fff;
+    padding: 30px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+section h2 {
+    color: #1a252f;
+    margin-bottom: 20px;
+    border-bottom: 3px solid #f39c12;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+/* --- BIOGRAFI --- */
+.about-container {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.profile-img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid #f39c12;
+}
+
+.bio-text {
+    flex: 1;
+    font-size: 1.1rem;
+}
+
+/* --- TABEL PENDIDIKAN & PENGALAMAN --- */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+table th, table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+table th {
+    background-color: #1a252f;
+    color: #fff;
+}
+
+table tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* --- KEAHLIAN (LIST) --- */
+.skills-list {
+    list-style-type: square;
+    padding-left: 20px;
+}
+
+.skills-list li {
+    margin-bottom: 10px;
+    font-size: 1.05rem;
+}
+
+/* --- MULTIMEDIA --- */
+.media-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.audio-box, .video-box {
+    background: #f9f9f9;
+    padding: 15px;
+    border-radius: 6px;
+    border: 1px solid #e1e1e1;
+}
+
+.audio-box h3, .video-box h3 {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    color: #333;
+    border-bottom: none;
+}
+
+audio, video {
+    width: 100%;
+    margin-top: 5px;
+}
+
+/* --- FORM KONTAK --- */
+.contact-form .form-group {
+    margin-bottom: 15px;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.contact-form input, 
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: inherit;
+}
+
+.contact-form input:focus, 
+.contact-form textarea:focus {
+    outline: none;
+    border-color: #f39c12;
+    box-shadow: 0 0 5px rgba(243, 156, 18, 0.3);
+}
+
+.btn-submit {
+    background-color: #1a252f;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.btn-submit:hover {
+    background-color: #34495e;
+}
+
+/* --- FOOTER --- */
+footer {
+    background-color: #1a252f;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    font-size: 0.9rem;
+}
+
+/* --- RESPONSIVE DESIGN (UNTUK HP/LAYAR KECIL) --- */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    header nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .media-container {
+        grid-template-columns: 1fr;
+    }
+}
